@@ -1,9 +1,10 @@
 import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
 import { PublicLayout } from "@/layouts/public-layouts";
-import HomePage from "@/routes/home";
 import AuthenticationLayout from "@/layouts/auth-lauout";
 import ProtectedRoutes from "@/layouts/protectedroutes";
 import {MainLayout} from "@/layouts/mainlayout";
+
+import HomePage from "@/routes/home";
 
 import { SignInPage } from "./routes/signin";
 import { SignUpPage } from "./routes/signup";
@@ -11,11 +12,11 @@ import { SignUpPage } from "./routes/signup";
 const App = () => {
   return (
     <Router>
-    <Routes>
-      {/* public routes*/ }
-      <Route element={<PublicLayout />}>
-      <Route index element={<HomePage/>}></Route>
-      </Route>
+      <Routes>
+        {/* public routes */}
+        <Route element={<PublicLayout />}>
+          <Route index element={<HomePage />} />
+        </Route>
 
       {/* authentication layout */}
       <Route element={<AuthenticationLayout />}>
